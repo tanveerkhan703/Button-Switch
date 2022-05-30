@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(13, 48, 77);
+    min-height: 100vh;
+}
+
+label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;
+}
+
+label input {
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label span .icon {
+    font-size: 35px;
+    color: rgb(199, 132, 132);
+    transition: 0.6s ease;
+
+}
+
+label input:checked~span {
+    left: 75px;
+
+}
+
+label input:checked~span .icon {
+    color: rgb(215, 83, 83);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff);
+
+}
+
+.bulb{
+    position: absolute;
+    top: 80px;
+    width: 500px;
+    height: 300px;
+    transition: 0.5s;
+    transform: translateX(-35%);
+    background: url(/assets/images/1.png);
+    background-size: cover;
+}
+label input:checked~ .bulb{
+    position: absolute;
+    top: 80px;
+    width: 500px;
+    height: 300px;
+    transition: 0.5s;
+    transform: translateX(-35%);
+    background: url(/assets/images/404.png);
+    background-size: cover;
+}
